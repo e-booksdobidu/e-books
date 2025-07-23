@@ -1,40 +1,115 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700"
-      rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="https://www.guiailha.com/favicon.ico">
     <title>e-books do Bidu</title>
-     <meta name="DESCRIPTION" content="e-books do autor bid Bike para serm aixados gratuitamente, e books com temtica de bikes, bicicetas, turismo e cicloviagem">
+    <meta name="description" content="e-books do autor Bidu Bike para serem baixados gratuitamente, e-books com temática de bikes, bicicletas, turismo e cicloviagem">
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; background-color: #afa; color: #333; }
-        a { text-decoration: none; color: #006900; font-weight: normal; }
-        a:hover { text-decoration: underline; }
+        body {
+            font-family: 'Ubuntu', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #e6ffe6;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 20px; /* Adiciona um pouco de espaço abaixo do cabeçalho */
+        }
+        header h1 { /* Estilo específico para o H1 dentro do header */
+            color: #009600;
+            font-size: 1.8em; /* Tamanho grande para o título principal */
+            font-weight: normal;            
+            margin-bottom: 10px;
+        }
+        p { /* Estilo padrão para parágrafos */
+            color: #333; /* Cor padrão para a maioria dos textos */
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .main-message { /* Classe para o "Aproveite o conteúdo." */
+            color: #009600;
+            font-size: 1.5em;
+            font-style: normal;
+            margin-top: 20px; /* Espaço para separar do cabeçalho */
+        }
+        .pix-info {
+            font-size: 1em; /* Tamanho um pouco maior para melhor leitura */
+            margin-top: 15px;
+            margin-bottom: 30px;
+            color: #242424;
+        }
+        .call-to-action { /* Classe para o "Clique nos links abaixo para baixar:" */
+            color: #009600;
+            font-size: 1.4em;
+            font-weight: normal;
+            margin-top: 30px; /* Espaço para separar da seção PIX */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px; /* Espaço acima da lista de e-books */
+        }
+        li {
+            margin-bottom: 40px;
+        }
+        a {
+            text-decoration: none;
+            color: #006900;
+            font-weight: bold;
+            display: block;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 240px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px auto;
+            border: 2px solid #009600;
+            border-radius: 5px;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em; /* Tamanho mais legível para o rodapé */
+            color: #666;
+        }
     </style>
 </head>
 <body>
-<div align='center'>
-<p align='center'>
-    <font color='#009600'>
-    <big><big>Bem-vindo à minha biblioteca de e-books!</big>
-    <br>
-    Aproveite o conteúdo.</big></font>
-    <br>
-    Os e-books são gratuitos mas se quiser colaborar<br>
-    aceito PIX de qualquer valor.<br>
-    chave: agi@br1.nl
-        <br><br>
-    <big>Clique nos links abaixo para baixar:</big><br>
-    
-        <a href="cicloturistando.pdf" download>Cicloturistando<br><img src='cicloturistando.png'></a>
-        <br><Br>
-        <a href="PBdalando - Tour de bike por João Pessoa.pdf" download>PBdalando - Um tour de bike por João Pessoa<br><img src='pbdalando.png'></a>
-        
-       
- 
-    <br><br><br>
-    <p>Este site está hospedado no GitHub Pages.</p>
+    <header>
+        <h1>Bem-vindo à minha biblioteca de e-books!</h1> </header>
+    <p class="main-message">Aproveite o conteúdo.</p>
+
+    <div class="pix-info">
+        Os e-books são gratuitos, mas se quiser colaborar<br>
+        aceito PIX de qualquer valor.<br>
+        Chave: **agi@br1.nl**
     </div>
+
+    <p class="call-to-action">Clique nos links abaixo para baixar:</p>
+
+    <ul>
+        <li>
+            <a href="cicloturistando.pdf" download>
+                <img src='cicloturistando.png' alt='Capa do E-book Cicloturistando'>
+                Cicloturistando
+            </a>
+        </li>
+        <li>
+            <a href="PBdalando - Tour de bike por João Pessoa.pdf" download>
+                <img src='pbdalando.png' alt='Capa do E-book PBdalando - Um tour de bike por João Pessoa'>
+                PBdalando - Um tour de bike por João Pessoa
+            </a>
+        </li>
+    </ul>
+
+    <footer>
+        <p>Este site está hospedado no GitHub Pages.</p>
+    </footer>
+</body>
 </html>
