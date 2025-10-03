@@ -8,6 +8,76 @@
     <title>e-books do Bidu</title>
     <meta name="description" content="e-books nacionais e internacionais em domínio público, e do autor do site, Bidubike para serem baixados gratuitamente, e-books com temática de bikes e cicloviagem">
     <style>
+    /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fim Reset básico */
+
+/* Fontes */
+body {
+    font-family: 'Ubuntu', Arial, Verdana, sans-serif;
+}
+strong {
+    font-weight: 500;
+}
+color {
+    font-color: #630;
+}
+/* Fim Fontes */
+
+/* config de cores*/
+.verde {color: #246900;}
+.preto {color: #000000;}
+.vermelho {color: #f00;}
+.acqua {color: #0ff;}
+.azul {color: #00f;}
+.amarelo-ilha {color: #ffffe0;}
+.marrom {color: #996633;}
+.marrom2 {color: #663300;}
+ /* fim config de cores*/
+
+/* Parágrafo */
+p {
+  text-align: justify;
+  line-height: 1.5;
+}
+/* Fim Parágrafo */
+
+/* labels */
+.label1 {margin-right: 12px}
+.label2 {margin-right: 24px}
+.label3 {margin-right: 36px}
+/* Fim labels */
+
+h1 {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: normal;
+    font-family: 'Ubuntu', Arial, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: normal;
+    color: preto;
+}
+
+h3 {
+    font-size: 1.0em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: normal;
+}
+/* Fim Fonts */
         body {
             font-family: 'Ubuntu', Arial, sans-serif;
             line-height: 1.6;
@@ -16,70 +86,119 @@
             color: #333;
             text-align: center;
         }
-        header {
-            margin-bottom: 0px; /* Adiciona um pouco de espaço abaixo do cabeçalho */
-        }
-        header h1 { /* Estilo específico para o H1 dentro do header */
-            color: #afa;
-            font-size: 2.1em; /* Tamanho grande para o título principal */
-            font-weight: bold;            
-            margin-bottom: 0px;
-        }
-        
-        /* config do div topocapa*/
-.topocapa
-{margin-top: 0px;
-margin-bottom: 0px;
-border: none;
-padding-top: 0px;
-padding-bottom: 0px;
-background-image: url("estante-para-livros.webp");
-background-repeat: no-repeat;
-background-size: cover;
-width:100%;
-float: center;
-text-align: center;
-font-size: 14px;
-color: #333;}
- /* fim config do div topocapa*/
+
+        /* Header com Imagem de Fundo e Título */
+.header-principal {
+    height: 300px;
+    background-image: url("estante-para-livros.webp");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8%;
+    left: 4%;
+}
+
+.header-content h1 {
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: left;
+}
+
+.header-content small {
+    color: #ffffe0;
+    font-size: 1.0em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+/* Fim Header com Imagem de Fundo e Título */
+
+
+ /* Container Flex com os Itens */
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.item{
+    background-color: #ffffe0;
+    border: 1.5px solid #002469;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    margin: 5px;
+    max-width: 400px;
+    color: #000;
+}
+
+
+.item2{
+    background-color: #ffffe0;
+    border: 1.5px solid #006924;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    margin: 5px;
+    max-width: 500px;
+    color: #000;
+}
+
+.item3{
+    background-color: #ffffe0;
+    border: 1.5px solid #006924;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    margin: 5px;
+    width: 280px;
+    color: #000;
+    }
+
+/* Regras de responsividade */
+@media (max-width: 650px) {
+    .item {
+        max-width: 100%; /* Em telas pequenas, ocupa a largura total */
+    }
+}
+@media (min-width: 651px) {
+    .item {
+        width: 450px; /* A partir de 651px, volta para a largura fixa */
+    }
+}
+/* Fim Container Flex com os Itens */
+
+
+
         
         p { /* Estilo padrão para parágrafos */
             color: #333; /* Cor padrão para a maioria dos textos */
             font-size: 1.1em;
-            margin-bottom: 0px;
+            margin-bottom: 2px;
         }
         .main-message { /* Classe para o "Aproveite o conteúdo." */
             color: #009600;
             font-size: 1.5em;
             font-style: normal;
-            margin-top: 0px; /* Espaço para separar do cabeçalho */
+            margin-top: 1px; /* Espaço para separar do cabeçalho */
         }
-        .pix-info {
-            font-size: 1em; /* Tamanho um pouco maior para melhor leitura */
-            margin-top: 15px;
-            margin-bottom: 30px;
-            color: #242424;
-        }
+       
         .call-to-action { /* Classe para o "Clique nos links abaixo para baixar:" */
             color: #009600;
-            font-size: 1.4em;
+            font-size: 0.9em;
             font-weight: normal;
-            margin-top: 10px; /* Espaço para separar da seção PIX */
+            font-style:italic;
+            margin-top: 1px; /* Espaço para separar da seção PIX */
         }
-         .subtitulos { /* Classe para o "Clique nos links abaixo para baixar:" */
-            color: #009600;
-            font-size: 1.2em;
-            font-weight: normal;
-            margin-top: 1px; /* Espaço para separar da seção anterior */
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            margin-top: 0px; /* Espaço acima da lista de e-books */
-        }
-        li {
-            margin-bottom: 0px;
-        }
+        
         a {
             text-decoration: none;
             color: #006900;
@@ -98,9 +217,17 @@ color: #333;}
             border-radius: 5px;
         }
         footer {
-            margin-top: 50px;
+    background-color: #246900;
+    border: 0px solid #999;
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+    margin: 5px;
+    width: 100%;
+    color: #fff;
+            margin-top: 24px;
             font-size: 0.9em; /* Tamanho mais legível para o rodapé */
-            color: #666;
+            color: #fff;
         }
     </style>
 </head>
@@ -108,105 +235,87 @@ color: #333;}
     <header>
     <!-- inicio da div#topocapa -->
 <div style="top:0px; right:0px; width:100%">
-<div class="topocapa">
-<font face="ubuntu">
+<div class='header-principal'>
+<div class='header-content'>
+    
 <h1>Bem-vindo à minha biblioteca ! </h1> 
 <br><br><br>
  </header>
-</font>
-</div></div>
+</div></div><br>
 <!-- fim da div#topocapa -->
-    
-    <p class="main-message">Aproveite o conteúdo.</p>
 
-    <div class="pix-info">
-        Os e-books são gratuitos, mas se quiser colaborar<br>
+<div class="container-flex">
+    <div class="item3">
+        <p class="main-message">Aproveite o conteúdo.</p>
+        <p>
+            Todos os e-books divulgados são gratuitos, mas se quiser colaborar
         aceito PIX de qualquer valor.<br>
-        Chave: <b>bidu@br1.nl</b>
+        Chave: <span class='color: verde'>bidu@br1.ln</span>
+        </p>
     </div>
 
-    <p class="call-to-action">Clique nos links abaixo para baixar:</p>
-	<p class="subtitulos">Autores Nacionais<p>
-
-    <ul>
-	<li>
-            <a href="aa_casa_de_pensao.pdf" download><b>Aluísio Azevedo</b> - Casa de Pensão</a>
-        </li>
-        <li>
-            <a href="aa_o_mulato.pdf" download><b>Aluísio Azevedo</b> - O Mulato</a>
-        </li>
-        <li>
-            <a href="an_sumario_das-armadas.pdf" download><b>Anonimo</b> - Sumário das Armadas</a>
-        </li>
-        <li>
-            <a href="aa2_eu_e_outras_poesias.pdf" download><b>Augusto dos Anjos</b> - Eu e Outras Poesias</a>
-        </li>
-        <li>
-            <a href="bb_cicloturistando.pdf" download><b>Bidubike</b> - Cicloturistando</a>
-        </li>
-        <li>
-            <a href="bb_do-rio-a-porto-seguro-uma-clcloviagem.pdf" download><b>Bidubike</b> - Do Rio a Porto Seguro - Uma Cicloviagem</a>
-        </li>
-        <li>
-            <a href="bb_PBdalando - Tour de bike por João Pessoa.pdf" download><b>Bidubike</b> - PBdalando, um tour de bike por João Pessoa</a>
-        </li>
-        <li>
-            <a href="cx_os_mensageiros.pdf" download><b>Chico Xavier</b> - Os Mensageiros</a>
-        </li>
-        <li>
-            <a href="jm_o_moço_loiro.pdf" download><b>Joaquim M. de Macedo</b> - O Moço Loiro</a>
-        </li>
-        <li>
-            <a href="ja_cinco_minutos.pdf" download><b>José de Alencar</b> - Cinco Minutos</a>
-        </li>
-	<li>
-            <a href="ja_iracema.pdf" download><b>José de Alencar</b> - Iracema</a>
-        </li>
-        
-        <li>
-            <a href="lb_contos.pdf" download><b>Lima Barreto</b> - Contos</a>
-        </li>
-<li>
-            <a href="lb_o_homem_que_sabia_javanes.pdf" download><b>Lima Barreto</b> - O Homem Que Sabia Javanes</a>
-        </li>
+<div class="item2">
+        <p class="main-message">Autores Nacionais.</p>
+        <p class="call-to-action">Clique nos links a seguir e baixe seu e-book:</p>
         <br>
-    </ul>
-    
-    <p class="subtitulos">Autores Internacionais<p>
+        <p>
+            <a href="aa_casa_de_pensao.pdf" download><b>Aluísio Azevedo</b> - Casa de Pensão</a>
+       
+            <a href="aa_o_mulato.pdf" download><b>Aluísio Azevedo</b> - O Mulato</a>
+<br>
+            <a href="an_sumario_das-armadas.pdf" download><b>Anônimo</b> - Sumário das Armadas</a>
+<br>
+            <a href="aa2_eu_e_outras_poesias.pdf" download><b>Augusto dos Anjos</b> - Eu e Outras Poesias</a>
+<br>
+            <a href="bb_cicloturistando.pdf" download><b>Bidubike</b> - Cicloturistando</a>
 
-    <ul>
-        <li>
+            <a href="bb_do-rio-a-porto-seguro-uma-clcloviagem.pdf" download><b>Bidubike</b> - Do Rio a Porto Seguro - Uma Cicloviagem</a>
+
+            <a href="bb_PBdalando - Tour de bike por João Pessoa.pdf" download><b>Bidubike</b> - PBdalando, um tour de bike por João Pessoa</a>
+<br>
+            <a href="cx_os_mensageiros.pdf" download><b>Chico Xavier</b> - Os Mensageiros</a>
+<br>
+            <a href="jm_o_moço_loiro.pdf" download><b>Joaquim M. de Macedo</b> - O Moço Loiro</a>
+<br>
+            <a href="ja_cinco_minutos.pdf" download><b>José de Alencar</b> - Cinco Minutos</a>
+
+            <a href="ja_iracema.pdf" download><b>José de Alencar</b> - Iracema</a>
+<br>
+            <a href="lb_contos.pdf" download><b>Lima Barreto</b> - Contos</a>
+            <a href="lb_o_homem_que_sabia_javanes.pdf" download><b>Lima Barreto</b> - O Homem Que Sabia Javanes</a>
+        <br>
+        <br>
+        </p>
+    </div>
+
+<div class="item2">
+        <p class="main-message">Autores Internacionais.</p>
+            <p class="call-to-action">Clique nos links a seguir e baixe seu e-book:</p>
+        <br>
+        <p>
             <a href="as_voo noturno.pdf" download><b>A. Saint Exupéry</b> - Voo Noturno</a>
-        </li>
-        <li>
+        <br>
             <a href="ac_assassinato_no_campo_de_golfe.pdf" download><b>Agatha Cristhie</b> - Assassinato no Campo de Golfe</a>
-        </li>
-        <li>
+        <br>
             <a href="ak_livro_dos_espiritos.pdf" download><b>Alan Kardec</b> - Livro dos Espiritos</a>
-        </li>
-        <li>
+        <br>
             <a href="ah_admiravel_mundo_novo.pdf" download><b>Aldous Huxley</b> - Admirável Mundo Novo</a>
-        </li>
-        <li>
+        <br>
             <a href="ad_oconde_de_monte_cristo.pdf" download><b>Alexandre Dumas</b> - O Conde de Monte Cristo</a>
-        </li>
-        <li>
+        <br>
             <a href="cd_o_sinaleiro.pdf" download><b>Charles Dickens</b> - O Sinaleiro</a>
-        </li>
-        <li>
+        <br>
             <a href="jv_20_mil_léguas_submarinas.pdf" download><b>Júlio Verne</b> - 20 mil léguas submarinas</a>
-        </li>
-        <li>
             <a href="jv_a_volta_ao_mundo_em _80_dias.pdf" download><b>Júlio Verne</b> - A Volta ao mundo em 80 Dias</a>
-        </li>
-        <li>
             <a href="jv_viagem_ao_centro_da_terra" download><b>Júlio Verne</b> - Viagem ao Centro da Terra</a>
-        </li>
-        
-    </ul>
+        <br>
+    </div>
+</div>
 
     <footer>
-        <p>Este site está hospedado no GitHub Pages.</p>
+        Responsável: Bidu Bike<br>
+        cavernadacriacao@gmail.com<br>
+        Este site está hospedado no GitHub Pages.
     </footer>
 </body>
 </html>
